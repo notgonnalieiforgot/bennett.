@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* ThemeEngine CSS variables — the real palettes land in Phase 1.3.    */
+/* Each theme sets the same token names; components consume them via   */
+/* Tailwind utilities (bg-bg, text-text, etc.) defined in              */
+/* tailwind.config.ts.                                                  */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --bn-radius: 16px;
+  --bn-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.bn-theme-glassmorphism {
+  --bn-bg: 10 10 10;
+  --bn-surface: 255 255 255;
+  --bn-border: 255 255 255;
+  --bn-text: 245 245 245;
+  --bn-muted: 160 160 160;
+  --bn-accent: 255 107 0;
+  --bn-accent-alt: 10 132 255;
+  --bn-radius: 18px;
+  --bn-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.bn-theme-neo-brutalism {
+  --bn-bg: 245 240 232;
+  --bn-surface: 255 255 255;
+  --bn-border: 0 0 0;
+  --bn-text: 0 0 0;
+  --bn-muted: 136 136 136;
+  --bn-accent: 255 69 0;
+  --bn-accent-alt: 0 0 0;
+  --bn-radius: 2px;
+  --bn-shadow: 4px 4px 0 #000;
+}
+
+.bn-theme-claymorphism {
+  --bn-bg: 255 245 228;
+  --bn-surface: 255 255 255;
+  --bn-border: 232 180 184;
+  --bn-text: 30 30 30;
+  --bn-muted: 130 110 110;
+  --bn-accent: 168 197 160;
+  --bn-accent-alt: 232 180 184;
+  --bn-radius: 24px;
+  --bn-shadow: 8px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.bn-theme-liquid-glass {
+  --bn-bg: 8 8 14;
+  --bn-surface: 200 200 220;
+  --bn-border: 180 180 200;
+  --bn-text: 240 240 250;
+  --bn-muted: 150 150 170;
+  --bn-accent: 200 200 220;
+  --bn-accent-alt: 123 47 190;
+  --bn-radius: 28px;
+  --bn-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

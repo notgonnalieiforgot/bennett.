@@ -1,0 +1,191 @@
+name: Bennett
+options:
+  bundleIdPrefix: com.bennett
+  deploymentTarget:
+    iOS: "17.0"
+    macOS: "14.0"
+    watchOS: "10.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    DEVELOPMENT_TEAM: ""
+
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 12.0.0
+  GoogleSignIn:
+    url: https://github.com/google/GoogleSignIn-iOS
+    from: 8.0.0
+  FacebookSDK:
+    url: https://github.com/facebook/facebook-ios-sdk
+    from: 18.0.0
+  Stripe:
+    url: https://github.com/stripe/stripe-ios
+    from: 24.0.0
+
+# Per CLAUDE.md, iOS + macOS share a SwiftUI codebase under apple/Bennett/.
+# Platform-only files live under apple/Bennett/Platform/{iOS,macOS}/ and are
+# excluded from the opposite target. Files that need both platforms use
+# `#if os(iOS)` / `#if os(macOS)` conditionals inline.
+targets:
+  Bennett:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Bennett
+        excludes:
+          - "Resources/GoogleService-Info.plist.example"
+          - "Resources/Info-macOS.plist"
+          - "Resources/BennettMac.entitlements"
+          - "Platform/macOS/**"
+          - "Platform/watchOS/**"
+    info:
+      path: Bennett/Resources/Info-iOS.plist
+      properties:
+        CFBundleDisplayName: bennett
+        UILaunchScreen:
+          UIColorName: ""
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: "bennett uses ur camera for the smile sync step of the daily double-lock."
+        NSMicrophoneUsageDescription: "bennett uses ur mic for the vocalization step of the daily double-lock."
+        NSSpeechRecognitionUsageDescription: "bennett listens for the daily defusion phrase."
+        NSHealthShareUsageDescription: "bennett reads ur step count, heart rate, and workouts to verify the bio-shock redemption trial."
+        NSHealthUpdateUsageDescription: "bennett logs ur completed workouts when u finish a redemption trial."
+        NSCalendarsFullAccessUsageDescription: "bennett protects ur focus time by adding bennett shield events to ur calendar."
+        NSFaceIDUsageDescription: "use face id to skip sign-in next time."
+        UIBackgroundModes:
+          - remote-notification
+        CFBundleURLTypes:
+          - CFBundleURLSchemes:
+              - com.bennett.cos
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bennett.cos
+        PRODUCT_NAME: Bennett
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        ENABLE_PREVIEWS: YES
+    dependencies:
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseFirestoreSwift
+      - package: Firebase
+        product: FirebaseFunctions
+      - package: Firebase
+        product: FirebaseMessaging
+      - package: GoogleSignIn
+        product: GoogleSignIn
+      - package: GoogleSignIn
+        product: GoogleSignInSwift
+      - package: FacebookSDK
+        product: FacebookLogin
+      - package: FacebookSDK
+        product: FacebookCore
+      - package: Stripe
+        product: StripePaymentSheet
+    entitlements:
+      path: Bennett/Resources/Bennett.entitlements
+      properties:
+        com.apple.developer.applesignin:
+          - Default
+        aps-environment: development
+
+  BennettMac:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Bennett
+        excludes:
+          - "Resources/GoogleService-Info.plist.example"
+          - "Resources/Info-iOS.plist"
+          - "Resources/Bennett.entitlements"
+          - "Platform/iOS/**"
+          - "Platform/watchOS/**"
+    info:
+      path: Bennett/Resources/Info-macOS.plist
+      properties:
+        CFBundleDisplayName: bennett
+        LSMinimumSystemVersion: "14.0"
+        NSCameraUsageDescription: "bennett uses ur webcam for the smile sync step of the daily double-lock. it's prompted on first launch."
+        NSMicrophoneUsageDescription: "bennett uses ur mic for the vocalization step of the daily double-lock. it's prompted on first launch."
+        NSSpeechRecognitionUsageDescription: "bennett listens for the daily defusion phrase."
+        NSCalendarsFullAccessUsageDescription: "bennett protects ur focus time by adding bennett shield events to ur calendar."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bennett.cos.mac
+        PRODUCT_NAME: Bennett
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_ENTITLEMENTS: Bennett/Resources/BennettMac.entitlements
+    # Phase 2 macOS deps: Firebase only. GoogleSignIn-iOS + FacebookSDK don't
+    # ship native macOS targets — Phase 7 will swap to GoogleSignIn (Mac SDK)
+    # + a custom OAuth flow for Facebook on Mac. Stripe iOS doesn't run on Mac
+    # natively either; Stripe.js via WKWebView is the Phase 4 path.
+    dependencies:
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseFirestoreSwift
+      - package: Firebase
+        product: FirebaseFunctions
+      - package: Firebase
+        product: FirebaseMessaging
+    entitlements:
+      path: Bennett/Resources/BennettMac.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.device.camera: true
+        com.apple.security.device.microphone: true
+        com.apple.security.network.client: true
+        com.apple.security.personal-information.calendars: true
+        com.apple.developer.applesignin:
+          - Default
+        com.apple.security.files.user-selected.read-write: true
+
+  BennettWatch:
+    type: application
+    platform: watchOS
+    deploymentTarget: "10.0"
+    sources:
+      - path: Bennett/Platform/watchOS
+    info:
+      path: Bennett/Platform/watchOS/Info-watchOS.plist
+      properties:
+        CFBundleDisplayName: bennett
+        WKApplication: true
+        WKWatchOnly: false
+        WKCompanionAppBundleIdentifier: com.bennett.cos
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bennett.cos.watchkitapp
+        PRODUCT_NAME: bennett
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_PREVIEWS: YES
+    # watchOS Firebase support is the firebase-ios-sdk too — pulls in
+    # Firestore + Auth via watchOS-compatible targets.
+    dependencies:
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseAuth

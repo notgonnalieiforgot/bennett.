@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "version": 1,
+    "lastVettedAt": "2026-05-06",
+    "vettedBy": "founder",
+    "note": "Founder-curated whitelist of YouTube video IDs paired to Knowledge Modules. Only IDs in this file are playable inside the Doer Tab — there is no recommendation feed. Add IDs via /api/youtube/founder-add (admin)."
+  },
+  "videos": []
+}

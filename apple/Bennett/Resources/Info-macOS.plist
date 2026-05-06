@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>bennett.</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>NSCameraUsageDescription</key>
+    <string>bennett uses ur webcam for the smile sync step of the daily double-lock. it's prompted on first launch.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>bennett uses ur mic for the vocalization step of the daily double-lock. it's prompted on first launch.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>bennett listens for the daily defusion phrase.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>bennett protects ur focus time by adding bennett shield events to ur calendar.</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>built for bennett</string>
+</dict>
+</plist>

@@ -1,0 +1,1 @@
+export { Confirmshaming } from './Confirmshaming';

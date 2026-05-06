@@ -1,0 +1,620 @@
+{
+  "_meta": {
+    "version": 1,
+    "lastVettedAt": "2026-05-06",
+    "vettedBy": "founder",
+    "note": "Founder-vetted PSM Bar Exam bank. Edits require Founder review. Phase 6 will sign these with a Founder key for tamper detection."
+  },
+  "finance": {
+    "sector": "finance",
+    "passThreshold": 0.8,
+    "questions": [
+      {
+        "id": "fin-1",
+        "prompt": "An investor's net real return is best approximated by:",
+        "options": [
+          "Nominal return − inflation",
+          "Nominal return − inflation − fees − tax drag",
+          "Nominal return × (1 − tax bracket)",
+          "Dividend yield + capital gains"
+        ],
+        "answerIndex": 1,
+        "rationale": "Real return must net out inflation, fees, and the tax drag on realized gains/dividends. Behavior gap is the fourth and uncontrollable leak."
+      },
+      {
+        "id": "fin-2",
+        "prompt": "The 'sequence of returns' risk is most relevant to:",
+        "options": [
+          "Long-term accumulators in their 20s",
+          "Index investors holding to 80",
+          "Retirees withdrawing from a portfolio",
+          "Day traders"
+        ],
+        "answerIndex": 2,
+        "rationale": "A bad market in the first years of withdrawal compounds against you for life. Same average return, very different outcomes depending on order."
+      },
+      {
+        "id": "fin-3",
+        "prompt": "A covered call generates premium in exchange for:",
+        "options": [
+          "Unlimited upside on the underlying",
+          "Capping upside above the strike price",
+          "Margin call risk",
+          "Loss of voting rights"
+        ],
+        "answerIndex": 1,
+        "rationale": "You sold the right for the buyer to take the shares at the strike. Above strike, your gain is capped; you keep the premium either way."
+      },
+      {
+        "id": "fin-4",
+        "prompt": "A Roth IRA contribution is most attractive when:",
+        "options": [
+          "You are in your peak earning years",
+          "You expect higher tax rates in retirement than today",
+          "You want to deduct the contribution",
+          "You're maxed out on 401(k) match"
+        ],
+        "answerIndex": 1,
+        "rationale": "Roth is paid with after-tax dollars and grows tax-free — it wins when future rates exceed today's. The match-then-Roth ordering is also valid but secondary."
+      },
+      {
+        "id": "fin-5",
+        "prompt": "Which of these is NOT typically a feature of a high-quality bond fund?",
+        "options": [
+          "Diversification across hundreds of issuers",
+          "Daily liquidity",
+          "Guaranteed principal protection",
+          "Transparent expense ratio"
+        ],
+        "answerIndex": 2,
+        "rationale": "Bond funds can lose value as rates rise. Only individual bonds held to maturity guarantee principal — and only if the issuer doesn't default."
+      },
+      {
+        "id": "fin-6",
+        "prompt": "A 60/40 portfolio's primary historical strength has been:",
+        "options": [
+          "Highest average return",
+          "Negative correlation between stocks and bonds during equity drawdowns",
+          "Lowest expense ratios",
+          "Tax efficiency"
+        ],
+        "answerIndex": 1,
+        "rationale": "Stocks and bonds historically zigzagged in opposite directions, smoothing the ride. 2022 disrupted this; 2023 partially restored it."
+      },
+      {
+        "id": "fin-7",
+        "prompt": "The 4% rule for safe withdrawal:",
+        "options": [
+          "Was Bengen's empirical finding from US data, not a guarantee",
+          "Applies globally with the same precision",
+          "Is unaffected by sequence of returns",
+          "Only works on Roth accounts"
+        ],
+        "answerIndex": 0,
+        "rationale": "Bengen's analysis was 1926-1976 US data. Updated work suggests 3.0–3.5% for global portfolios facing today's valuations."
+      },
+      {
+        "id": "fin-8",
+        "prompt": "Which is the strongest practical hedge against career income loss?",
+        "options": [
+          "Buying long-duration Treasuries",
+          "An emergency fund of 3–6 months of expenses in cash",
+          "Holding gold",
+          "Inverse ETFs"
+        ],
+        "answerIndex": 1,
+        "rationale": "Career income loss is short-duration; only cash without market risk fully hedges it. Treasuries and gold help broad portfolios but can drop when you need them."
+      }
+    ]
+  },
+  "real_estate": {
+    "sector": "real_estate",
+    "passThreshold": 0.8,
+    "questions": [
+      {
+        "id": "re-1",
+        "prompt": "Net Operating Income (NOI) is calculated as:",
+        "options": [
+          "Annual rent − operating expenses",
+          "Annual rent − operating expenses − mortgage payment",
+          "Annual rent × cap rate",
+          "Sale price − purchase price"
+        ],
+        "answerIndex": 0,
+        "rationale": "NOI excludes financing costs (mortgage), depreciation, and capex — those affect cash flow and tax, not the property's operational performance."
+      },
+      {
+        "id": "re-2",
+        "prompt": "A 6% cap rate property in a stable Sun Belt market vs a 9% cap rate property in a declining Rust Belt market — the higher cap rate primarily reflects:",
+        "options": [
+          "Better management",
+          "Lower demand and higher risk premium",
+          "Older buildings with more depreciation",
+          "Shorter lease terms"
+        ],
+        "answerIndex": 1,
+        "rationale": "Cap rates are price signals. Higher cap = market demands more income per dollar of price because the asset is riskier."
+      },
+      {
+        "id": "re-3",
+        "prompt": "Cash-on-cash return uses which denominator?",
+        "options": [
+          "Property purchase price",
+          "Total cash invested (down payment + closing + initial reserves)",
+          "Gross rent",
+          "After-tax cash flow"
+        ],
+        "answerIndex": 1,
+        "rationale": "Cash-on-cash isolates the return on the actual capital you put in. Levered properties can show high cash-on-cash with low cap rates."
+      },
+      {
+        "id": "re-4",
+        "prompt": "The 1% rule (monthly rent ≥ 1% of price) is most useful as:",
+        "options": [
+          "An absolute buy/no-buy filter",
+          "A first-pass screen — most deals failing it deserve no further analysis",
+          "A tax avoidance strategy",
+          "A metric for evaluating short-term rentals"
+        ],
+        "answerIndex": 1,
+        "rationale": "Heuristic, not a rule. Markets exist where 0.7% works (appreciation play); markets exist where 1.2% is mandatory (cash flow play)."
+      },
+      {
+        "id": "re-5",
+        "prompt": "A 1031 exchange allows you to:",
+        "options": [
+          "Defer capital gains tax by reinvesting proceeds in like-kind property",
+          "Avoid all real estate taxes permanently",
+          "Convert investment property to primary residence tax-free",
+          "Borrow against the property at lower rates"
+        ],
+        "answerIndex": 0,
+        "rationale": "Defer, not avoid. Step-up in basis at death can eliminate the deferred gain entirely, but the 1031 itself is a deferral mechanism."
+      },
+      {
+        "id": "re-6",
+        "prompt": "Vacancy stress-testing means:",
+        "options": [
+          "Modeling +50% vacancy on top of historical averages",
+          "Assuming 0% vacancy if rents are below market",
+          "Counting vacancy only during recessions",
+          "Buying only fully-leased properties"
+        ],
+        "answerIndex": 0,
+        "rationale": "If a 5% historical vacancy goes to 7.5%, the deal must still be solvent. Otherwise you're betting on a benign environment."
+      },
+      {
+        "id": "re-7",
+        "prompt": "DSCR (Debt Service Coverage Ratio) of 1.25 means:",
+        "options": [
+          "NOI is 25% of debt service",
+          "NOI exceeds debt service by 25%",
+          "Cap rate is 25%",
+          "Loan-to-value is 25%"
+        ],
+        "answerIndex": 1,
+        "rationale": "Lenders typically require ≥1.20-1.25. Below 1.0 means NOI doesn't cover the mortgage — feeding the property from outside cash."
+      },
+      {
+        "id": "re-8",
+        "prompt": "Which is NOT a legitimate red flag in a rental deal?",
+        "options": [
+          "Seller's stated expenses are below industry norms",
+          "Comp set is heavily skewed to one outlier sale",
+          "Building was recently repainted",
+          "Property has had three tenant turnovers in two years"
+        ],
+        "answerIndex": 2,
+        "rationale": "Repainting is a normal listing prep. The other three are classic warning signs — cooked numbers, manipulated comps, tenant churn."
+      }
+    ]
+  },
+  "ai_tech": {
+    "sector": "ai_tech",
+    "passThreshold": 0.8,
+    "questions": [
+      {
+        "id": "ai-1",
+        "prompt": "Prompt caching primarily reduces:",
+        "options": [
+          "Output token costs",
+          "Input token costs and latency on repeated context",
+          "Hallucination rate",
+          "Token limits"
+        ],
+        "answerIndex": 1,
+        "rationale": "Cache hits skip re-tokenization of the cached prefix — cheaper input and faster TTFT. Output costs are unaffected."
+      },
+      {
+        "id": "ai-2",
+        "prompt": "When choosing between a frontier and a smaller model for a high-volume task, the dominant consideration is:",
+        "options": [
+          "Brand familiarity",
+          "Per-task cost vs failure rate — quality-per-dollar at the required reliability",
+          "Most recent benchmark scores",
+          "Whether it's open-source"
+        ],
+        "answerIndex": 1,
+        "rationale": "Frontier > smaller only matters if the smaller model fails often enough that retries + downstream errors cost more than the price gap."
+      },
+      {
+        "id": "ai-3",
+        "prompt": "Retrieval-augmented generation (RAG) helps most when:",
+        "options": [
+          "The model needs to write creative fiction",
+          "The model needs grounded answers from a corpus you control",
+          "You want lower latency",
+          "You want the model to think more freely"
+        ],
+        "answerIndex": 1,
+        "rationale": "RAG anchors output to retrieved documents — the right tool when factual grounding matters more than novelty."
+      },
+      {
+        "id": "ai-4",
+        "prompt": "Tool-use (function calling) failure modes most commonly come from:",
+        "options": [
+          "Bad tool descriptions / unclear parameter schemas",
+          "The model being too smart",
+          "Streaming",
+          "Markdown in the system prompt"
+        ],
+        "answerIndex": 0,
+        "rationale": "Models pick the wrong tool or pass wrong params when tool docs are vague. Tight schemas + good descriptions are 80% of the fix."
+      },
+      {
+        "id": "ai-5",
+        "prompt": "An effective evaluation harness for an LLM application includes:",
+        "options": [
+          "Only synthetic test cases",
+          "Real production traces + frozen golden cases + adversarial cases",
+          "Vibes and a Slack thread",
+          "Only the latest benchmark suite"
+        ],
+        "answerIndex": 1,
+        "rationale": "Real traces catch real distribution shift. Goldens prevent regression. Adversarial cases test edge behavior. All three are needed."
+      },
+      {
+        "id": "ai-6",
+        "prompt": "Why use structured (JSON) output over freeform?",
+        "options": [
+          "It's faster",
+          "It produces deterministic, machine-parseable results downstream",
+          "It always lowers token usage",
+          "It eliminates hallucinations"
+        ],
+        "answerIndex": 1,
+        "rationale": "Structured output makes the model's output a typed contract for the rest of your code. Doesn't fix hallucination of facts."
+      },
+      {
+        "id": "ai-7",
+        "prompt": "When NOT to fine-tune:",
+        "options": [
+          "When you have <100 high-quality labeled examples",
+          "When prompt engineering hasn't been exhausted",
+          "When your task is well-served by a few-shot prompt",
+          "All of the above"
+        ],
+        "answerIndex": 3,
+        "rationale": "Fine-tuning adds operational cost and lock-in. Prompting and few-shot examples solve most production tasks faster and cheaper."
+      },
+      {
+        "id": "ai-8",
+        "prompt": "Token budgeting in a long agent loop primarily means:",
+        "options": [
+          "Truncating or summarizing context before it explodes",
+          "Always using max output tokens",
+          "Disabling streaming",
+          "Pre-paying for tokens"
+        ],
+        "answerIndex": 0,
+        "rationale": "Without active management, agents hit context limits or pay for irrelevant history. Summarization + selective retention is the practical move."
+      }
+    ]
+  },
+  "fitness": {
+    "sector": "fitness",
+    "passThreshold": 0.8,
+    "questions": [
+      {
+        "id": "fit-1",
+        "prompt": "VO2 max improvements of meaningful magnitude typically require:",
+        "options": [
+          "Daily LISS cardio for 90+ minutes",
+          "Zone 2 base + 1–2 high-intensity intervals (e.g., 4x4) per week",
+          "Strict carnivore diet",
+          "Yoga every morning"
+        ],
+        "answerIndex": 1,
+        "rationale": "Polarized training: most volume easy, a small dose hard. The 4x4 protocol has the best published evidence for VO2 max bumps."
+      },
+      {
+        "id": "fit-2",
+        "prompt": "Per-meal protein utilization plateaus around:",
+        "options": [
+          "10g",
+          "20–40g for most adults",
+          "100g",
+          "There is no upper bound"
+        ],
+        "answerIndex": 1,
+        "rationale": "Muscle protein synthesis maxes at ~30g for most. Beyond that, extra is oxidized or used for other purposes — not nothing, but diminishing returns."
+      },
+      {
+        "id": "fit-3",
+        "prompt": "Sleep regularity (consistent wake time) vs sleep duration — research suggests:",
+        "options": [
+          "Duration matters more",
+          "Regularity often predicts mortality risk independent of duration",
+          "They're equivalent",
+          "Neither matters if you nap"
+        ],
+        "answerIndex": 1,
+        "rationale": "Regularity studies (e.g., Phillips 2024) show consistency outperforms duration for some health outcomes."
+      },
+      {
+        "id": "fit-4",
+        "prompt": "Progressive overload in strength training means:",
+        "options": [
+          "Adding weight every session no matter what",
+          "Gradually increasing volume, intensity, or density across weeks",
+          "Lifting to failure every set",
+          "Switching exercises weekly"
+        ],
+        "answerIndex": 1,
+        "rationale": "The lever can be weight, reps, sets, or rest reduction. The stimulus must creep up; how doesn't matter as much."
+      },
+      {
+        "id": "fit-5",
+        "prompt": "Caffeine half-life is approximately:",
+        "options": [
+          "1 hour",
+          "5–6 hours for most people",
+          "24 hours",
+          "Negligible"
+        ],
+        "answerIndex": 1,
+        "rationale": "After 5 hours, half remains. CYP1A2 polymorphisms shift this; slow metabolizers hit 8+ hours. Cap at ~10h before sleep is safe."
+      },
+      {
+        "id": "fit-6",
+        "prompt": "Resistance training's strongest non-aesthetic effect is:",
+        "options": [
+          "Vanity",
+          "Preserving muscle mass and bone density into old age",
+          "Lowering testosterone",
+          "Replacing cardiovascular work"
+        ],
+        "answerIndex": 1,
+        "rationale": "Sarcopenia and osteoporosis are leading drivers of fall-related mortality. Lifting is preventive medicine."
+      },
+      {
+        "id": "fit-7",
+        "prompt": "Heart rate variability (HRV) is most useful as:",
+        "options": [
+          "A daily readiness signal for an individual, not for cross-person comparison",
+          "An absolute fitness score",
+          "A weight-loss predictor",
+          "A 1RM predictor"
+        ],
+        "answerIndex": 0,
+        "rationale": "HRV varies wildly across people. Within yourself, downward trends signal accumulated stress / poor recovery."
+      },
+      {
+        "id": "fit-8",
+        "prompt": "Time-restricted eating (e.g., 16:8) shows the strongest effect on:",
+        "options": [
+          "Total weight loss vs isocaloric diets",
+          "Metabolic markers via reduced spontaneous intake — when adherence is real",
+          "Muscle gain",
+          "VO2 max"
+        ],
+        "answerIndex": 1,
+        "rationale": "TRE rarely beats matched-calorie controls for fat loss alone. Its benefit is mostly through making caloric restriction easier."
+      }
+    ]
+  },
+  "medical": {
+    "sector": "medical",
+    "passThreshold": 0.8,
+    "questions": [
+      {
+        "id": "med-1",
+        "prompt": "An NNT (Number Needed to Treat) of 100 for an intervention means:",
+        "options": [
+          "100% effective",
+          "100 patients must be treated for one to benefit",
+          "Effects appear after 100 days",
+          "The drug costs $100"
+        ],
+        "answerIndex": 1,
+        "rationale": "NNT contextualizes absolute risk reduction. NNT 5 vs NNT 100 is the difference between a no-brainer and a marginal call."
+      },
+      {
+        "id": "med-2",
+        "prompt": "Bayesian thinking on a positive screening test mostly hinges on:",
+        "options": [
+          "Test sensitivity alone",
+          "Pre-test probability of the condition in the screened population",
+          "Cost",
+          "Time of day"
+        ],
+        "answerIndex": 1,
+        "rationale": "Even a 99% specific test in a 1-per-10,000 disease population produces mostly false positives. Pre-test probability dominates."
+      },
+      {
+        "id": "med-3",
+        "prompt": "ApoB measures:",
+        "options": [
+          "Total cholesterol",
+          "The number of atherogenic lipoprotein particles in blood",
+          "Triglycerides",
+          "HDL"
+        ],
+        "answerIndex": 1,
+        "rationale": "ApoB is one molecule per LDL/VLDL/IDL particle — a more direct count of atherogenic particles than LDL-C, especially in metabolic syndrome."
+      },
+      {
+        "id": "med-4",
+        "prompt": "The hierarchy of evidence in medicine (highest to lowest) is approximately:",
+        "options": [
+          "Anecdote → expert opinion → case report → RCT → meta-analysis",
+          "Meta-analysis of RCTs → individual RCTs → cohort → case-control → case series → expert opinion → anecdote",
+          "Twitter → Reddit → preprint → journal",
+          "Newest paper wins"
+        ],
+        "answerIndex": 1,
+        "rationale": "Higher levels reduce confounding and bias. Single RCTs can be wrong; well-conducted meta-analyses synthesize across them."
+      },
+      {
+        "id": "med-5",
+        "prompt": "The placebo effect is best described as:",
+        "options": [
+          "Imaginary improvement",
+          "A real biological response involving expectation, conditioning, and context — affecting subjective and some objective outcomes",
+          "Lying about results",
+          "Only relevant in pain studies"
+        ],
+        "answerIndex": 1,
+        "rationale": "Placebo has measurable effects on pain, mood, and some immune markers. It's a feature of human biology, not a bug."
+      },
+      {
+        "id": "med-6",
+        "prompt": "Polypharmacy risk in older adults primarily involves:",
+        "options": [
+          "Cost",
+          "Drug-drug interactions and cumulative anticholinergic burden",
+          "Inconvenience",
+          "Pill size"
+        ],
+        "answerIndex": 1,
+        "rationale": "Each additional medication compounds interaction risk. Anticholinergic load specifically correlates with cognitive decline."
+      },
+      {
+        "id": "med-7",
+        "prompt": "A relative risk reduction of 50% with an absolute risk reduction of 0.5% means:",
+        "options": [
+          "The intervention halves your odds dramatically",
+          "Risk dropped from 1.0% to 0.5% — meaningful only at scale",
+          "You should always take it",
+          "Numbers are made up"
+        ],
+        "answerIndex": 1,
+        "rationale": "Relative numbers feel large; absolute numbers reveal the magnitude. NNT here is 200."
+      },
+      {
+        "id": "med-8",
+        "prompt": "Informed consent should communicate:",
+        "options": [
+          "Best-case outcome only",
+          "Risks, benefits, alternatives, and uncertainty in patient-understandable language",
+          "Just the doctor's recommendation",
+          "Only legal disclosures"
+        ],
+        "answerIndex": 1,
+        "rationale": "Real informed consent includes the option of doing nothing, plus honest acknowledgment of what's uncertain."
+      }
+    ]
+  },
+  "general": {
+    "sector": "general",
+    "passThreshold": 0.8,
+    "questions": [
+      {
+        "id": "gen-1",
+        "prompt": "Goodhart's Law states:",
+        "options": [
+          "Money attracts money",
+          "When a measure becomes a target, it ceases to be a good measure",
+          "Faster is better",
+          "More is more"
+        ],
+        "answerIndex": 1,
+        "rationale": "Optimizing toward a proxy metric tends to break the relationship between the proxy and what you actually wanted."
+      },
+      {
+        "id": "gen-2",
+        "prompt": "Effective time-blocking means:",
+        "options": [
+          "Filling every minute with tasks",
+          "Reserving deep blocks AND defending them — saying no to most interrupts",
+          "Doing email first",
+          "Using a Pomodoro timer"
+        ],
+        "answerIndex": 1,
+        "rationale": "Blocks without defense are decorative. The work is in turning the meeting / interrupt down."
+      },
+      {
+        "id": "gen-3",
+        "prompt": "Compound interest applied to skill acquisition means:",
+        "options": [
+          "Practice increases ability linearly",
+          "Small daily reps compound non-linearly through skill stacking and feedback loops",
+          "Talent dominates outcomes",
+          "Time matters more than effort"
+        ],
+        "answerIndex": 1,
+        "rationale": "Each additional rep makes the next more useful — feedback loops, mental models, transfer effects. The shape is exponential, not linear."
+      },
+      {
+        "id": "gen-4",
+        "prompt": "Decision fatigue is best mitigated by:",
+        "options": [
+          "Sleeping more",
+          "Reducing daily decisions through defaults, routines, and pre-commitments",
+          "Caffeine",
+          "Working harder"
+        ],
+        "answerIndex": 1,
+        "rationale": "Default-by-design (same breakfast, same gym time) preserves decision capital for the things that matter."
+      },
+      {
+        "id": "gen-5",
+        "prompt": "Confirmation bias in research means:",
+        "options": [
+          "Asking better questions",
+          "Selectively gathering and remembering evidence consistent with prior beliefs",
+          "Trusting peer review",
+          "Publishing replications"
+        ],
+        "answerIndex": 1,
+        "rationale": "The fix is steelmanning the opposite view, pre-registering hypotheses, and seeking disconfirming evidence."
+      },
+      {
+        "id": "gen-6",
+        "prompt": "The Eisenhower matrix sorts tasks by:",
+        "options": [
+          "Cost and benefit",
+          "Urgency and importance",
+          "Difficulty and reward",
+          "Internal and external"
+        ],
+        "answerIndex": 1,
+        "rationale": "Urgent-important = do. Important-not-urgent = schedule. Urgent-not-important = delegate. Neither = drop."
+      },
+      {
+        "id": "gen-7",
+        "prompt": "Cal Newport's 'deep work' is contrasted with:",
+        "options": [
+          "Sleep",
+          "Shallow work — cognitively low-value, easily-replicable tasks",
+          "Exercise",
+          "Reading"
+        ],
+        "answerIndex": 1,
+        "rationale": "Shallow work expands to fill available time; deep work is what differentiates output. The job is to expand the deep portion."
+      },
+      {
+        "id": "gen-8",
+        "prompt": "An effective weekly review answers:",
+        "options": [
+          "How many hours did I work?",
+          "What did I commit to, what did I do, what did I learn, what's next?",
+          "How many emails did I clear?",
+          "What's trending?"
+        ],
+        "answerIndex": 1,
+        "rationale": "Reviews close the loop on intent → execution → learning → next intent. Without it, weeks blur."
+      }
+    ]
+  }
+}
