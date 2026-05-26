@@ -13,6 +13,9 @@ Hub for operating rules and hard-won feedback — the non-negotiables that gover
 - [[No Pirated Fonts]] — never embed aggregator/FontsHub fonts on production; require licensed web-font files
 - [[Cloudflare Pages Env-Var Traps]] — three identical-symptom env-var failures; diagnose, don't guess
 
+## Personal non-negotiables (founder layer)
+- [[Pat Bennett — Mission & Non-Negotiables]] — faith + daily prayer, 6:30 AM, no zero days, mom's retirement as deadline, integrity in every deliverable, gym/powerlifting as force multiplier. The personal non-negotiables underneath every project principle above.
+
 ## Where it connects
 - [[Knowledge Graph Home]]
 - [[Goals MOC]]

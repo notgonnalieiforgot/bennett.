@@ -4,7 +4,10 @@ aliases: ["Goals Map", "Goals Hub"]
 ---
 # Goals MOC
 
-The hub for Sidechained's overarching goals — the outcomes every project and process is meant to advance. These goals reinforce each other: a reusable build system enables the growth-partner model, the knowledge graph makes both compound, and financial handoffs make the value legible.
+The hub for Sidechained's overarching goals — the outcomes every project and process is meant to advance. These goals reinforce each other: a reusable build system enables the growth-partner model, the knowledge graph makes both compound, and financial handoffs make the value legible. All of them serve the founder mission.
+
+## Founder mission (the why underneath all goals)
+- [[Pat Bennett — Mission & Non-Negotiables]] — identity, SideChain targets ($25–50K MRR in 6mo / $10M in 2–5yr), mom's retirement deadline, non-negotiables (faith, 6:30 AM, no zero days, gym, integrity), and the decision filters used by the [[founder-advisor]] Claude agent for every future-project recommendation.
 
 ## Goals
 - [[Growth Partner Model]] — be a partner who scales companies after delivery, not a one-off builder.

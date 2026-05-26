@@ -45,6 +45,9 @@ Hub for the SKILLS category — every Agent Skill and tool wired into Claude Cod
 - [[Superpowers Plugin]] — brainstorming, TDD, debugging, plans, parallel agents.
 - [[Automation & Orchestration]] — loop, schedule, babysit, split-to-prs.
 
+## Strategy & Decisions
+- [[Founder Advisor]] — Claude Code subagent that filters every future-project decision through [[Pat Bennett — Mission & Non-Negotiables]] and returns a structured verdict (GO / WAIT / DECLINE + tier + risk + next move + trade).
+
 ## Connections
 - [[Knowledge Graph Home]]
 - [[High-End Interactive Website Builder]]
